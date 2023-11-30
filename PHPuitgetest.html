@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<title>PHPuitgetest</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+    <?php
+    echo "Today is " . date("Y/m/d") . "<br>";
+    echo "Today is " . date("Y.m.d") . "<br>";
+    echo "Today is " . date("Y-m-d") . "<br>";
+    echo "Today is " . date("l");
+    ?>
+
+<h2>PHP Uitproberen in een website</h2>
+<p>Deze website bevat een zogenaamde header, drie gelijke kolommen en een footer. De bedoeling is om uit te proberen of er PHP-programmering toegepast kan worden.</p>
+<p>Uitproberen maar...</p>
+
+<div class="header">
+  <h2>Header</h2>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">Column<p>willekeurige tekst in kolom 1</p><?php
+// Check if the type of a variable is integer   
+$x = 5985;
+var_dump(is_int($x));
+
+echo "<br>";
+
+// Check again... 
+$x = 59.85;
+var_dump(is_int($x));
+?>
+</div>
+
+  <div class="column" style="background-color:#bbb;">Column<p>tekst in kolom 2</p><?php
+$txt = "PHP";
+echo "I love $txt!";
+?>
+</div>
+
+  <div class="column" style="background-color:#ccc;">Column<p>iets in kolom 3</p><?php 
+$x = "Hello world!";
+$y = 'Hello world!';
+
+echo $x;
+echo "<br>"; 
+echo $y;
+?></div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>
